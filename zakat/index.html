@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Zakat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link rel="icon" href="../images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Zakat</h1>
+      <div class="tabs">
+        <button class="tab-button active" data-tab="fitrah">
+          Zakat Fitrah
+        </button>
+        <button class="tab-button" data-tab="harta">Zakat Harta</button>
+        <button class="tab-button" data-tab="profesi">Zakat Profesi</button>
+        <button class="tab-button" data-tab="usaha">Zakat Usaha</button>
+      </div>
+
+      <div id="fitrah" class="tab-content active">
+        <h2>Perhitungan Zakat Fitrah</h2>
+        <div class="input-group">
+          <label for="jumlah-jiwa">Jumlah Jiwa:</label>
+          <input type="text" id="jumlah-jiwa" value="1" />
+        </div>
+        <div class="input-group">
+          <label for="harga-beras">Harga Beras per Kg (Rp):</label>
+          <input type="text" id="harga-beras" value="12.000" />
+        </div>
+        <button class="calculate-button" onclick="calculateZakatFitrah()">
+          Hitung Zakat Fitrah
+        </button>
+        <div class="result-box">
+          <p>Zakat Fitrah yang harus dibayar:</p>
+          <p class="result" id="result-fitrah">Rp 0</p>
+        </div>
+        <div class="info">
+          <p>
+            <i class="fas fa-info-circle"></i> Zakat Fitrah adalah 2.5 kg beras
+            atau makanan pokok per jiwa.
+          </p>
+        </div>
+      </div>
+
+      <div id="harta" class="tab-content">
+        <h2>Perhitungan Zakat Harta (Maal)</h2>
+        <div class="input-group">
+          <label for="saldo-tabungan">Saldo Tabungan/Kas (Rp):</label>
+          <input type="text" id="saldo-tabungan" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="nilai-emas">Nilai Emas/Perak yang Dimiliki (Rp):</label>
+          <input type="text" id="nilai-emas" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="nilai-properti"
+            >Nilai Properti yang Disewakan/Produktif (Rp):</label
+          >
+          <input type="text" id="nilai-properti" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="hutang-jatuh-tempo">Hutang Jatuh Tempo (Rp):</label>
+          <input type="text" id="hutang-jatuh-tempo" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="harga-emas-per-gram"
+            >Harga Emas per Gram Saat Ini (Rp):</label
+          >
+          <input type="text" id="harga-emas-per-gram" value="1.200.000" />
+        </div>
+        <button class="calculate-button" onclick="calculateZakatHarta()">
+          Hitung Zakat Harta
+        </button>
+        <div class="result-box">
+          <p>Total Harta yang Wajib Dizakati:</p>
+          <p class="result" id="total-harta">Rp 0</p>
+          <p>Zakat Harta yang harus dibayar:</p>
+          <p class="result" id="result-harta">Rp 0</p>
+          <p>Nisab Zakat Harta:</p>
+          <p class="result" id="nisab-harta">Rp 0</p>
+        </div>
+        <div class="info">
+          <p>
+            <i class="fas fa-info-circle"></i> Nisab Zakat Harta adalah setara
+            85 gram emas murni. Tarif zakat 2.5% setelah mencapai nisab dan haul
+            (satu tahun). <br />Harta yang dihitung adalah harta produktif yang
+            telah mencapai nisab dan berlalu satu tahun.
+          </p>
+        </div>
+      </div>
+
+      <div id="profesi" class="tab-content">
+        <h2>Perhitungan Zakat Profesi</h2>
+        <div class="input-group">
+          <label for="penghasilan-bulanan"
+            >Penghasilan Bruto Bulanan (Rp):</label
+          >
+          <input type="text" id="penghasilan-bulanan" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pengeluaran-pokok-bulanan"
+            >Pengeluaran Pokok Bulanan (Rp):</label
+          >
+          <input type="text" id="pengeluaran-pokok-bulanan" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="harga-beras-profesi"
+            >Harga Beras per Kg Saat Ini (Rp) (untuk nisab):</label
+          >
+          <input type="text" id="harga-beras-profesi" value="12.000" />
+        </div>
+        <button class="calculate-button" onclick="calculateZakatProfesi()">
+          Hitung Zakat Profesi
+        </button>
+        <div class="result-box">
+          <p>Nisab Zakat Profesi (setara 520 kg beras):</p>
+          <p class="result" id="nisab-profesi">Rp 0</p>
+          <p>Penghasilan Bersih Setelah Pengeluaran Pokok:</p>
+          <p class="result" id="penghasilan-bersih-profesi">Rp 0</p>
+          <p>Zakat Profesi yang harus dibayar:</p>
+          <p class="result" id="result-profesi">Rp 0</p>
+        </div>
+        <div class="info">
+          <p>
+            <i class="fas fa-info-circle"></i> Nisab Zakat Profesi adalah setara
+            520 kg beras. Tarif zakat 2.5% dari penghasilan kotor (atau sebagian
+            ulama bersih) jika telah mencapai nisab. <br />Pembayaran bisa
+            bulanan atau tahunan.
+          </p>
+        </div>
+      </div>
+
+      <div id="usaha" class="tab-content">
+        <h2>Perhitungan Zakat Usaha</h2>
+        <div class="input-group">
+          <label for="modal-usaha"
+            >Modal Usaha (termasuk kas, piutang, stok barang) (Rp):</label
+          >
+          <input type="text" id="modal-usaha" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="keuntungan-usaha"
+            >Keuntungan Usaha Setelah Pajak (Rp):</label
+          >
+          <input type="text" id="keuntungan-usaha" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="hutang-usaha">Hutang Usaha Jatuh Tempo (Rp):</label>
+          <input type="text" id="hutang-usaha" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="harga-emas-usaha"
+            >Harga Emas per Gram Saat Ini (Rp) (untuk nisab):</label
+          >
+          <input type="text" id="harga-emas-usaha" value="1.200.000" />
+        </div>
+        <button class="calculate-button" onclick="calculateZakatUsaha()">
+          Hitung Zakat Usaha
+        </button>
+        <div class="result-box">
+          <p>Total Aset Bersih Usaha:</p>
+          <p class="result" id="total-aset-usaha">Rp 0</p>
+          <p>Nisab Zakat Usaha (setara 85 gram emas):</p>
+          <p class="result" id="nisab-usaha">Rp 0</p>
+          <p>Zakat Usaha yang harus dibayar:</p>
+          <p class="result" id="result-usaha">Rp 0</p>
+        </div>
+        <div class="info">
+          <p>
+            <i class="fas fa-info-circle"></i> Zakat Usaha dihitung dari aset
+            bersih yang berputar (modal, keuntungan, piutang dikurangi hutang).
+            Nisab setara 85 gram emas. Tarif zakat 2.5% jika telah mencapai
+            nisab dan haul.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Pembagian Kurban</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Pembagian Kurban</h1>
+      <div class="form-group">
+        <label for="jenisHewan">Jenis Hewan:</label>
+        <select id="jenisHewan">
+          <option value="sapi">Sapi</option>
+          <option value="kambing">Kambing</option>
+          <option value="domba">Domba</option>
+          <option value="unta">Unta</option>
+          <option value="kerbau">Kerbau</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="beratHidup">Berat Hidup Hewan (kg):</label>
+        <input type="number" id="beratHidup" value="350" min="1" />
+      </div>
+      <div class="form-group">
+        <label for="jumlahPeserta">Jumlah Peserta Kurban:</label>
+        <input type="number" id="jumlahPeserta" value="1" min="1" />
+      </div>
+      <div class="form-group">
+        <label for="beratPerBagian"
+          >Perkiraan Berat Daging per Orang/Bagian (kg):</label
+        >
+        <input
+          type="number"
+          id="beratPerBagian"
+          value="0.5"
+          min="0.1"
+          step="0.1"
+        />
+      </div>
+      <button id="hitungButton">Hitung Pembagian</button>
+
+      <div id="hasilDetail" class="result-box">
+        <h2>Estimasi Hasil Potongan:</h2>
+        <p><strong>Berat Karkas:</strong> <span id="beratKarkas">0</span> kg</p>
+        <p>
+          <strong>Berat Daging Murni:</strong>
+          <span id="beratDagingMurni">0</span> kg
+        </p>
+        <p><strong>Berat Jeroan:</strong> <span id="beratJeroan">0</span> kg</p>
+        <p>
+          <strong>Total Daging Siap Bagikan:</strong>
+          <span id="totalDagingSiapBagikan">0</span> kg
+        </p>
+      </div>
+
+      <div id="hasilPembagian" class="result-box">
+        <h2>Rincian Pembagian per Golongan:</h2>
+        <p>
+          <strong>Untuk Pekurban:</strong> <span id="bagianPekurban">0</span> kg
+          (<span id="jumlahPekurbanTerima">0</span> orang, masing-masing
+          <span id="perPekurban">0</span> kg)
+        </p>
+        <p>
+          <strong>Untuk Fakir Miskin:</strong>
+          <span id="bagianFakirMiskin">0</span> kg (<span
+            id="jumlahFakirMiskinTerima"
+            >0</span
+          >
+          orang)
+        </p>
+        <p>
+          <strong>Untuk Masyarakat Umum/Kerabat:</strong>
+          <span id="bagianMasyarakatUmum">0</span> kg (<span
+            id="jumlahMasyarakatUmumTerima"
+            >0</span
+          >
+          orang)
+        </p>
+        <p class="catatan">
+          perhitungan ini berdasarkan persentase umum dan mungkin berbeda di
+          lapangan. Selalu konsultasikan dengan ahli fikih untuk pembagian yang
+          sesuai syariat secara detail.
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

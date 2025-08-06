@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Tahlilan</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <h1>Kalkulator Tahlilan</h1>
+      <div class="input-group">
+        <label for="dateOfDeath">Tanggal Meninggal:</label>
+        <div class="date-inputs">
+          <input
+            type="number"
+            id="dayOfDeath"
+            placeholder="Tanggal"
+            min="1"
+            max="31"
+            required
+          />
+          <input
+            type="number"
+            id="monthOfDeath"
+            placeholder="Bulan"
+            min="1"
+            max="12"
+            required
+          />
+          <input
+            type="number"
+            id="yearOfDeath"
+            placeholder="Tahun"
+            min="1900"
+            max="2100"
+            required
+          />
+        </div>
+      </div>
+      <button onclick="calculateTahlilan()">Hitung Tahlilan</button>
+    </div>
+
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>Hasil Perhitungan Tahlilan</h2>
+        <div class="result-section">
+          <p>
+            <strong>Tanggal Meninggal:</strong>
+            <span id="displayDateOfDeath"></span>
+          </p>
+          <p>
+            <strong>Sudah Meninggal Selama:</strong>
+            <span id="daysSinceDeath"></span>
+          </p>
+          <p><strong>Tahlilan Hari ke-1:</strong> <span id="tahlil1"></span></p>
+          <p><strong>Tahlilan Hari ke-3:</strong> <span id="tahlil3"></span></p>
+          <p><strong>Tahlilan Hari ke-7:</strong> <span id="tahlil7"></span></p>
+          <p>
+            <strong>Tahlilan Hari ke-40:</strong> <span id="tahlil40"></span>
+          </p>
+          <p>
+            <strong>Tahlilan Hari ke-100:</strong> <span id="tahlil100"></span>
+          </p>
+          <p>
+            <strong>Pendhak 1 (1 Tahun):</strong> <span id="pendhak1"></span>
+          </p>
+          <p>
+            <strong>Pendhak 2 (2 Tahun):</strong> <span id="pendhak2"></span>
+          </p>
+          <p>
+            <strong>Hari ke-1000 (Nyewu):</strong>
+            <span id="tahlil1000"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

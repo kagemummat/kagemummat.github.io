@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Fidyah & Kafarat</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-title">Kalkulator Fidyah & Kafarat</h1>
+      <p class="description">Perhitungan Besaran Fidyah dan Kafarat</p>
+
+      <div class="menu-tabs">
+        <button class="tab-btn active" onclick="showTab('fidyah')">
+          Hitung Fidyah
+        </button>
+        <button class="tab-btn" onclick="showTab('kifarat')">
+          Hitung Kafarat
+        </button>
+      </div>
+
+      <div id="fidyah-tab" class="tab-content active">
+        <div class="card">
+          <h2>Penghitung Fidyah</h2>
+          <form id="fidyah-form">
+            <div class="input-group">
+              <label for="hari-puasa"
+                >Jumlah Hari Puasa yang Ditinggalkan:</label
+              >
+              <input type="number" id="hari-puasa" min="1" required />
+            </div>
+            <button type="submit">Hitung Fidyah</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="kifarat-tab" class="tab-content">
+        <div class="card">
+          <h2>Penghitung Kafarat</h2>
+          <form id="kifarat-form">
+            <div class="input-group">
+              <label for="pelanggaran">Pilih Jenis Pelanggaran:</label>
+              <select id="pelanggaran" required>
+                <option value="">-- Pilih Pelanggaran --</option>
+                <option value="sumpah">Melanggar Sumpah</option>
+                <option value="ramadan">
+                  Berhubungan Suami-Istri saat Puasa Ramadan
+                </option>
+                <option value="zhihar">
+                  Zhihar (Ungkapan suami menyerupakan istrinya dengan salah
+                  seorang mahramnya)
+                </option>
+                <option value="membunuhburuansaatihram">
+                  Membunuh Hewan Buruan Saat Ihram
+                </option>
+                <option value="ila">
+                  Ila' (Suami yang bersumpah untuk tidak akan menggauli
+                  istrinya)
+                </option>
+              </select>
+            </div>
+            <button type="submit">Tampilkan Kafarat</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div id="modal-result-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Waris</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Harta Waris</h1>
+      <p class="disclaimer">
+        <strong>Peringatan:</strong> Kalkulator ini adalah alat bantu hitung
+        sederhana saja dan belum mencakup semua pembahasan hukum waris dalam
+        Islam yang lebih kompleks. Jangan gunakan ini sebagai dasar hukum untuk
+        pembagian harta waris yang sebenarnya. Selalu konsultasikan dengan ulama
+        atau ahli waris yang berwenang dan berkompeten menangani masalah harta
+        waris. Kami tidak bertanggung jawab jika ada pihak yang menggunakan
+        perhitungan ini sebagai pedoman dasar dalam pembagian harta waris.
+      </p>
+
+      <div class="input-section">
+        <label for="totalHarta">Total Harta Warisan (Rp):</label>
+        <input type="text" id="totalHarta" value="0" />
+      </div>
+
+      <div class="input-section">
+        <h2>Pengurangan Harta Sebelum Warisan:</h2>
+        <div class="form-group">
+          <label for="hutangHarta"
+            >Hutang yang berkaitan dengan harta (Rp):</label
+          >
+          <input type="text" id="hutangHarta" value="0" />
+        </div>
+        <div class="form-group">
+          <label for="hutangPribadi"
+            >Hutang yang tidak berkaitan dengan harta (Rp):</label
+          >
+          <input type="text" id="hutangPribadi" value="0" />
+        </div>
+        <div class="form-group">
+          <label for="biayaJenazah">Biaya penyelenggaraan jenazah (Rp):</label>
+          <input type="text" id="biayaJenazah" value="0" />
+        </div>
+        <div class="form-group">
+          <label for="wasiat">Wasiat (Rp, maksimum 1/3 harta bersih):</label>
+          <input type="text" id="wasiat" value="0" />
+        </div>
+      </div>
+
+      <div class="input-section">
+        <h2>Ahli Waris yang Ada:</h2>
+        <div class="ahli-waris-grid">
+          <div class="ahli-waris-item">
+            <input
+              type="checkbox"
+              id="adaSuami"
+              onchange="toggleGender('suami')"
+            />
+            <label for="adaSuami">Suami</label>
+          </div>
+          <div class="ahli-waris-item">
+            <input
+              type="checkbox"
+              id="adaIstri"
+              onchange="toggleGender('istri')"
+            />
+            <label for="adaIstri">Istri</label>
+            <input
+              type="number"
+              id="jumlahIstri"
+              min="1"
+              value="1"
+              class="hidden-input"
+            />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="anakLk">Anak Laki-laki:</label>
+            <input type="number" id="anakLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="anakPr">Anak Perempuan:</label>
+            <input type="number" id="anakPr" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="cucuLkAnakLk"
+              >Cucu Laki-laki dari Anak Laki-laki:</label
+            >
+            <input type="number" id="cucuLkAnakLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="cucuPrAnakLk"
+              >Cucu Perempuan dari Anak Laki-laki:</label
+            >
+            <input type="number" id="cucuPrAnakLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <input type="checkbox" id="adaAyah" />
+            <label for="adaAyah">Ayah</label>
+          </div>
+          <div class="ahli-waris-item">
+            <input type="checkbox" id="adaIbu" />
+            <label for="adaIbu">Ibu</label>
+          </div>
+          <div class="ahli-waris-item">
+            <input type="checkbox" id="adaKakekAyah" />
+            <label for="adaKakekAyah">Kakek (dari Ayah)</label>
+          </div>
+          <div class="ahli-waris-item">
+            <input type="checkbox" id="adaNenekIbu" />
+            <label for="adaNenekIbu">Nenek (dari Ibu)</label>
+          </div>
+          <div class="ahli-waris-item">
+            <input type="checkbox" id="adaNenekAyah" />
+            <label for="adaNenekAyah">Nenek (dari Ayah)</label>
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraKandungLk">Saudara Kandung Laki-laki:</label>
+            <input type="number" id="saudaraKandungLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraKandungPr">Saudara Kandung Perempuan:</label>
+            <input type="number" id="saudaraKandungPr" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraSebapakLk">Saudara Sebapak Laki-laki:</label>
+            <input type="number" id="saudaraSebapakLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraSebapakPr">Saudara Sebapak Perempuan:</label>
+            <input type="number" id="saudaraSebapakPr" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraSeibuLk">Saudara Seibu Laki-laki:</label>
+            <input type="number" id="saudaraSeibuLk" min="0" value="0" />
+          </div>
+          <div class="ahli-waris-item">
+            <label for="saudaraSeibuPr">Saudara Seibu Perempuan:</label>
+            <input type="number" id="saudaraSeibuPr" min="0" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <button onclick="hitungWaris()">Hitung Waris</button>
+
+      <div class="result-section" id="hasilPerhitungan">
+        <h2>Ringkasan Harta:</h2>
+        <p id="hartaAwal">Total Harta Awal: Rp 0</p>
+        <p id="totalPengurangan">Total Pengurangan: Rp 0</p>
+        <p id="hartaBersih">Harta Bersih (setelah hutang & wasiat): Rp 0</p>
+        <p>&nbsp;</p>
+        <h2>Hasil Pembagian Warisan:</h2>
+        <p id="hartaSisa">Total Harta Tersisa (setelah dibagikan): Rp 0</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ahli Waris</th>
+              <th>Status</th>
+              <th>Bagian</th>
+              <th>Jumlah (Rp)</th>
+            </tr>
+          </thead>
+          <tbody id="resultTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

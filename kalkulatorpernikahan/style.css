@@ -1,0 +1,398 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 2.2em;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #555;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.tab-button {
+  background-color: #e0f2f7;
+  color: #000000;
+  padding: 12px 20px;
+  border: 1px solid #cce7ee;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  flex-grow: 1;
+  min-width: 120px;
+}
+
+.tab-button:hover {
+  background-color: #cce7ee;
+  color: #000000;
+}
+
+.tab-button.active {
+  background-color: #008b23;
+  color: white;
+  border-color: #008b23;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 139, 35, 0.2);
+}
+
+.tab-content {
+  border: none;
+  border-radius: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.form-section {
+  margin-bottom: 0;
+  padding: 20px;
+  border: none;
+  border-radius: 0;
+  background-color: #f9f9f9;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+  width: 100%;
+}
+
+.input-group input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]:focus {
+  border-color: #88b04b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(136, 176, 75, 0.3);
+}
+
+.section-total {
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  font-size: 1.2em;
+  padding: 8px 15px;
+  background-color: #e0f2f7;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section-total span {
+  color: #007bff;
+  font-size: 1.1em;
+}
+
+.result-section {
+  margin-top: 0;
+  padding-top: 30px;
+  border-top: 2px dashed #eee;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.result-section h2 {
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+.result-section p.total-overall {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  background-color: #e6ffe6;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.result-section #totalAnggaranKeseluruhan {
+  color: #88b04b;
+  font-size: 1.8em;
+}
+
+.detail-category {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-category:last-child {
+  border-bottom: none;
+}
+
+.detail-category h3 {
+  color: #555;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.detail-category h3 span {
+  font-weight: bold;
+  color: #88b04b;
+  font-size: 1.1em;
+}
+
+.result-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result-section ul li {
+  background-color: #fefefe;
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  border-left: 4px solid #b2d890;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  color: #444;
+}
+
+.result-section ul li span {
+  font-weight: 600;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    padding: 0 15px;
+  }
+
+  .input-group label {
+    font-size: 0.95em;
+  }
+
+  .input-group input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .section-total {
+    font-size: 1.1em;
+  }
+
+  .section-total span {
+    font-size: 1em;
+  }
+
+  .tab-button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+
+  .result-section p.total-overall {
+    font-size: 1.3em;
+  }
+
+  .result-section #totalAnggaranKeseluruhan {
+    font-size: 1.5em;
+  }
+
+  .detail-category h3 {
+    font-size: 1.2em;
+  }
+
+  .result-section ul li {
+    font-size: 0.95em;
+  }
+
+  .tab-content {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+  }
+  .form-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  p {
+    padding: 0 10px;
+  }
+
+  .input-group input[type="text"] {
+    padding: 8px;
+  }
+
+  .section-total {
+    font-size: 1em;
+    padding: 6px 10px;
+  }
+
+  .section-total span {
+    font-size: 0.95em;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .tab-button {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .result-section p.total-overall {
+    font-size: 1.1em;
+  }
+
+  .result-section #totalAnggaranKeseluruhan {
+    font-size: 1.3em;
+  }
+
+  .detail-category h3 {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .detail-category h3 span {
+    margin-top: 5px;
+    font-size: 1em;
+  }
+
+  .result-section ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 8px 10px;
+  }
+  .result-section ul li span {
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
+
+  .tab-content {
+    width: 100%;
+    max-width: unset;
+    padding: 10px;
+  }
+  .form-section {
+    padding: 10px;
+  }
+}

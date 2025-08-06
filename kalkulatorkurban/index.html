@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Hewan Kurban</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link rel="icon" href="../images/icon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Biaya & Kelayakan Hewan Kurban</h1>
+
+      <div class="input-group">
+        <label for="jenis-hewan">Jenis Hewan:</label>
+        <select id="jenis-hewan">
+          <option value="domba">Domba</option>
+          <option value="kambing">Kambing</option>
+          <option value="sapi">Sapi</option>
+          <option value="kerbau">Kerbau</option>
+          <option value="unta">Unta</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="usia-hewan">Perkiraan Usia Hewan (bulan):</label>
+        <input type="number" id="usia-hewan" min="1" value="12" />
+      </div>
+
+      <div class="input-group">
+        <label for="kesehatan-hewan">Kondisi Kesehatan Hewan:</label>
+        <select id="kesehatan-hewan">
+          <option value="sehat">Sehat, tidak cacat jelas</option>
+          <option value="cacat">
+            Ada cacat jelas (buta, pincang parah, sakit)
+          </option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="jumlah-peserta">Jumlah Peserta Patungan:</label>
+        <input type="number" id="jumlah-peserta" min="1" value="1" />
+        <small
+          >Sapi/Kerbau/Unta bisa untuk 1-7 orang. Kambing/Domba untuk 1
+          orang.</small
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="harga-hewan">Perkiraan Harga Hewan (Rp):</label>
+        <input type="text" id="harga-hewan" value="0" />
+      </div>
+
+      <button id="hitung-kurban">Hitung Kelayakan & Biaya Kurban</button>
+
+      <div id="result-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Hasil Perhitungan:</h2>
+          <p id="modal-pesan-kelayakan"></p>
+          <p id="modal-biaya-per-orang"></p>
+          <p id="modal-catatan-tambahan"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

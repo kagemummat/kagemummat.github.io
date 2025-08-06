@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenali Mahram</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kenali Mahram Anda</h1>
+      <p>
+        Pilih hubungan kekerabatan untuk mengetahui apakah termasuk mahram atau
+        tidak.
+      </p>
+
+      <div class="input-group">
+        <label for="hubungan">Hubungan dengan Anda:</label>
+        <select id="hubungan">
+          <option value="" disabled selected>-- Pilih Hubungan --</option>
+          <option value="ayah">Ayah</option>
+          <option value="ibu">Ibu</option>
+          <option value="kakek">Kakek (dari Ayah/Ibu)</option>
+          <option value="nenek">Nenek (dari Ayah/Ibu)</option>
+          <option value="anak_kandung">Anak Kandung</option>
+          <option value="cucu">Cucu (dari anak laki-laki/perempuan)</option>
+          <option value="saudara_kandung">Saudara Kandung</option>
+          <option value="saudara_tiri">Saudara Tiri (seayah/seibu)</option>
+          <option value="paman">Paman (Saudara Ayah)</option>
+          <option value="bibi">Bibi (Saudara Ibu)</option>
+          <option value="keponakan_saudara">Keponakan (Anak Saudara)</option>
+          <option value="mertua">Mertua (Ayah/Ibu Istri/Suami)</option>
+          <option value="anak_tiri">
+            Anak Tiri (Anak istri/suami dari pernikahan lain)
+          </option>
+          <option value="menantu">
+            Menantu (Istri/Suami dari anak kandung)
+          </option>
+          <option value="saudara_sesusuan">Saudara Sesusuan</option>
+          <option value="ayah_sesusuan">Ayah Sesusuan</option>
+          <option value="ibu_sesusuan">Ibu Sesusuan</option>
+          <option value="sepupu">Sepupu (Anak Paman/Bibi)</option>
+          <option value="ipar">Ipar (Saudara Suami/Istri)</option>
+        </select>
+      </div>
+
+      <button class="button" onclick="periksaMahram()">Periksa Status</button>
+    </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+      <div id="popupContent" class="popup-content">
+        <button class="close-button" onclick="tutupPopup()">&times;</button>
+        <span id="popupIcon" class="status-icon"></span>
+        <h2 id="popupStatus"></h2>
+        <p id="popupKeterangan"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasbih Digital</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scheherazade+New&family=Noto+Naskh+Arabic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="counter-display">0</div>
+      <div class="arabic-text"></div>
+      <div class="latin-text"></div>
+      <div class="translation-text"></div>
+      <div class="main-buttons">
+        <button class="plus-button">+</button>
+      </div>
+
+      <button class="floating-control-button reduce-button" id="reduceButton">
+        <i class="fas fa-minus"></i>
+      </button>
+      <button class="floating-control-button reset-button" id="resetButton">
+        <i class="fas fa-redo"></i>
+      </button>
+      <button
+        class="floating-control-button volume-button volume-on"
+        id="volumeButton"
+      >
+        <i class="fas fa-volume-up"></i>
+      </button>
+
+      <button class="floating-control-button mission-button" id="missionButton">
+        <i class="fas fa-play"></i>
+      </button>
+
+      <div class="mission-overlay">
+        <div class="mission-modal">
+          <h2>Pilih Misi Dzikir</h2>
+          <label for="customTarget">Target Khusus:</label>
+          <input type="number" id="customTarget" value="33" min="1" />
+          <div class="mission-options">
+            <button
+              data-dzikir="subhanallah"
+              data-arabic="سُبْحَانَ اللَّهِ"
+              data-latin="Subhanallah"
+              data-translation="Maha Suci Allah"
+            >
+              Tasbih (سُبْحَانَ اللَّهِ)
+            </button>
+            <button
+              data-dzikir="alhamdulillah"
+              data-arabic="ٱلْحَمْدُ لِلَّٰهِ"
+              data-latin="Alhamdulillah"
+              data-translation="Segala puji bagi Allah"
+            >
+              Tahmid (ٱلْحَمْدُ لِلَّٰهِ)
+            </button>
+            <button
+              data-dzikir="allahuakbar"
+              data-arabic="ٱللَّٰهُ أَكْبَرُ"
+              data-latin="Allahu Akbar"
+              data-translation="Allah Maha Besar"
+            >
+              Takbir (ٱللَّٰهُ أَكْبَرُ)
+            </button>
+            <button
+              data-dzikir="laillahaillallah"
+              data-arabic="لَا إِلَٰهَ إِلَّا ٱللَّٰهُ"
+              data-latin="La ilaha illallah"
+              data-translation="Tiada Tuhan selain Allah"
+            >
+              Tahlil (لَا إِلَٰهَ إِلَّا ٱللَّٰهُ)
+            </button>
+            <button
+              data-dzikir="astaghfirullah"
+              data-arabic="أَسْتَغْفِرُ ٱللَّٰهَ"
+              data-latin="Astaghfirullah"
+              data-translation="Aku memohon ampun kepada Allah"
+            >
+              Istighfar (أَسْتَغْفِرُ ٱللَّٰهَ)
+            </button>
+          </div>
+          <button class="close-mission-modal">Tutup</button>
+        </div>
+      </div>
+
+      <div class="completion-animation">
+        <div class="fireworks"></div>
+        <p>Selamat! Misi Selesai!</p>
+      </div>
+    </div>
+
+    <div id="mission-start-notification" class="mission-start-notification">
+      <div class="notification-content">
+        <p class="notification-title"></p>
+        <p class="notification-message"></p>
+        <button class="notification-close-button">&times;</button>
+      </div>
+    </div>
+
+    <audio id="clickSound" src="./sound/click.mp3" preload="auto"></audio>
+    <audio
+      id="completionSound"
+      src="./sound/complete.mp3"
+      preload="auto"
+    ></audio>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Hadis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link rel="icon" href="../images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cari Hadis</h1>
+      <div class="search-section">
+        <select id="bookNameSelect">
+          <option value="">Pilih Kitab Hadis</option>
+          <option value="bukhari">Shahih Bukhari</option>
+          <option value="muslim">Shahih Muslim</option>
+          <option value="tirmidzi">Jami' At-Tirmidzi</option>
+          <option value="nasai">Sunan An-Nasai</option>
+        </select>
+        <input
+          type="number"
+          id="bookNumberInput"
+          placeholder="Nomor Hadis (Contoh, 1)"
+        />
+        <button id="searchButton">Cari</button>
+      </div>
+      <div id="loading" class="loading-spinner" style="display: none"></div>
+      <div id="results" class="results-section"></div>
+      <div id="error" class="error-message" style="display: none"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

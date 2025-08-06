@@ -1,0 +1,252 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e8f5e9; /* Hijau muda yang elegan */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ffffff; /* Tetap putih */
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #2e7d32; /* Hijau gelap untuk judul */
+  margin-bottom: 35px;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.search-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.search-section select,
+.search-section input[type="number"] {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid #a5d6a7; /* Border hijau lebih lembut */
+  border-radius: 10px;
+  font-size: 1.15em;
+  color: #444;
+  transition: all 0.3s ease-in-out;
+  min-width: 200px;
+  background-color: #f1f8e9; /* Background input hijau sangat muda */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7L146.2%20204%2018.3%2075.1a17.6%2017.6%200%200%0A0-23.7-1.8L.5%2084.5a17.6%2017.6%200%200%200%200%2025.2l139%20138.8c8.6%208.6%2020.1%2013.3%2032.2%2013.3s23.7-4.7%2032.2-13.3l139-138.8c1.8-1.8%202.6-4.1%202.6-6.5s-.9-4.8-2.6-6.5l-12.8-12.7c-3.6-3.5-8.5-5.3-13.7-5.3z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 14px;
+}
+
+.search-section select:focus,
+.search-section input[type="number"]:focus {
+  border-color: #43a047; /* Hijau saat fokus */
+  box-shadow: 0 0 0 4px rgba(67, 160, 71, 0.25); /* Shadow hijau saat fokus */
+  outline: none;
+}
+
+.search-section button {
+  background-color: #4caf50; /* Hijau utama untuk tombol */
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.15em;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); /* Shadow tombol hijau */
+}
+
+.search-section button:hover {
+  background-color: #388e3c; /* Hijau lebih gelap saat hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.search-section button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
+}
+
+.loading-spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4caf50; /* Warna spinner hijau */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.results-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.hadith-card {
+  background-color: #fdfefe;
+  border: 1px solid #c8e6c9; /* Border card hijau muda */
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hadith-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hadith-card h3 {
+  color: #34495e;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.hadith-card p {
+  line-height: 1.9;
+  color: #555;
+  font-size: 1.08em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.hadith-card .hadith-number {
+  font-weight: bold;
+  color: #4caf50; /* Warna nomor hadits hijau */
+  margin-bottom: 10px;
+  display: block;
+}
+
+.error-message {
+  color: #c62828; /* Merah gelap untuk error */
+  background-color: #ffcdd2; /* Background error merah muda */
+  border: 1px solid #ef9a9a; /* Border error merah muda */
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(198, 40, 40, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .container {
+    max-width: 95%;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 25px 20px;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .search-section {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .search-section select,
+  .search-section input[type="number"],
+  .search-section button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    font-size: 1em;
+  }
+
+  .search-section button {
+    padding: 12px 20px;
+  }
+
+  .hadith-card {
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .hadith-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+
+  .hadith-card p {
+    font-size: 0.95em;
+    line-height: 1.7;
+  }
+
+  .error-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1em;
+  }
+}

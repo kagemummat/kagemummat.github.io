@@ -1,0 +1,700 @@
+:root {
+  --primary-color: #1a522d;
+  --secondary-color: #2e8b57;
+  --tertiary-color: #3cb371;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --plus-button-bg: #ffd700;
+  --plus-button-color: #1a522d;
+  --plus-button-hover: #e6c200;
+  --plus-button-active: #ccae00;
+  --floating-button-bg: #6c757d;
+  --floating-button-color: white;
+  --floating-button-hover: #5a6268;
+  --floating-button-active: #494f54;
+  --floating-button-size: 50px;
+  --mission-button-bg: #6a0dad;
+  --mission-button-hover: #5d00a3;
+  --mission-button-active: #500092;
+  --modal-bg: #ffffff;
+  --modal-header-color: var(--primary-color);
+  --modal-border-radius: 12px;
+  --modal-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  --modal-transition-duration: 0.3s;
+  --notification-bg: rgba(255, 255, 255, 0.95);
+  --notification-border-radius: 15px;
+  --notification-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --notification-text-color: var(--text-color);
+  --notification-success-color: var(--secondary-color);
+  --notification-transition-duration: 0.4s;
+  --close-button-red: #dc3545;
+  --close-button-red-hover: #c82333;
+  --volume-on-color: #28a745;
+  --volume-on-hover-color: #218838;
+  --volume-on-active-color: #1e7e34;
+  --volume-off-color: #dc3545;
+  --volume-off-hover-color: #c82333;
+  --volume-off-active-color: #bd2130;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 50%,
+    var(--tertiary-color) 100%
+  );
+  color: var(--text-color);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.counter-display {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  padding: 15px 25px;
+  margin-top: 25px;
+  font-size: 8vw;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.4);
+  min-height: 70px;
+  flex-shrink: 0;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.arabic-text,
+.latin-text,
+.translation-text {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  padding: 0 10px;
+  width: 90%;
+  max-width: 500px;
+  min-height: 0;
+  margin-bottom: 5px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-top: 15px;
+}
+.translation-text {
+  margin-bottom: 15px;
+}
+
+.arabic-text.show,
+.latin-text.show,
+.translation-text.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+}
+
+.plus-button {
+  width: 50vmin;
+  height: 50vmin;
+  max-width: 250px;
+  max-height: 250px;
+  font-size: 25vmin;
+  background-color: var(--plus-button-bg);
+  color: var(--plus-button-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.plus-button:hover {
+  background-color: var(--plus-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.plus-button:active {
+  background-color: var(--plus-button-active);
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.floating-control-button {
+  position: fixed;
+  right: 20px;
+  width: var(--floating-button-size);
+  height: var(--floating-button-size);
+  border-radius: 50%;
+  background-color: var(--floating-button-bg);
+  color: var(--floating-button-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  z-index: 999;
+}
+
+.floating-control-button:hover {
+  background-color: var(--floating-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.floating-control-button:active {
+  background-color: var(--floating-button-active);
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mission-button {
+  bottom: 20px;
+  background-color: var(--mission-button-bg);
+}
+.mission-button:hover {
+  background-color: var(--mission-button-hover);
+}
+.mission-button:active {
+  background-color: var(--mission-button-active);
+}
+
+.volume-button {
+  bottom: calc(20px + var(--floating-button-size) + 10px);
+}
+
+.reset-button {
+  bottom: calc(20px + (var(--floating-button-size) * 2) + 20px);
+}
+
+.reduce-button {
+  bottom: calc(20px + (var(--floating-button-size) * 3) + 30px);
+}
+
+.floating-control-button.volume-on {
+  background-color: var(--volume-on-color);
+}
+.floating-control-button.volume-on:hover {
+  background-color: var(--volume-on-hover-color);
+}
+.floating-control-button.volume-on:active {
+  background-color: var(--volume-on-active-color);
+}
+
+.floating-control-button.volume-off {
+  background-color: var(--volume-off-color);
+}
+.floating-control-button.volume-off:hover {
+  background-color: var(--volume-off-hover-color);
+}
+.floating-control-button.volume-off:active {
+  background-color: var(--volume-off-active-color);
+}
+
+.mission-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--modal-transition-duration) ease,
+    visibility var(--modal-transition-duration) ease;
+}
+
+.mission-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mission-modal {
+  background-color: var(--modal-bg);
+  padding: 30px;
+  border-radius: var(--modal-border-radius);
+  box-shadow: var(--modal-shadow);
+  text-align: center;
+  max-width: 90%;
+  width: 500px;
+  color: var(--text-color);
+  transform: scale(0.9);
+  transition: transform var(--modal-transition-duration) ease-out,
+    opacity var(--modal-transition-duration) ease-out;
+  opacity: 0;
+}
+
+.mission-overlay.show .mission-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.mission-modal h2 {
+  margin-top: 0;
+  color: var(--modal-header-color);
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.mission-modal label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.mission-modal input[type="number"] {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mission-modal input[type="number"]:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
+}
+
+.mission-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.mission-options button {
+  padding: 14px 22px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 500;
+  flex: 1 1 45%;
+  max-width: 200px;
+  transition: background-color 0.2s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-options button:hover {
+  background-color: var(--tertiary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mission-options button:active {
+  background-color: var(--primary-color);
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.close-mission-modal {
+  padding: 12px 25px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.05em;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-mission-modal:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.close-mission-modal:active {
+  background-color: #bd2130;
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.completion-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.completion-animation.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.completion-animation p {
+  font-size: 5vw;
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+  animation: pulse 1.5s infinite alternate;
+  margin-top: 50px;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.fireworks::before,
+.fireworks::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #f00 10%, transparent 70%),
+    radial-gradient(circle, #0f0 10%, transparent 70%),
+    radial-gradient(circle, #00f 10%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: firework 2s ease-out forwards;
+}
+.fireworks::before {
+  top: 50%;
+  left: 30%;
+  animation-delay: 0s;
+}
+.fireworks::after {
+  top: 40%;
+  left: 70%;
+  animation-delay: 0.5s;
+  transform: scale(0.8);
+}
+
+@keyframes firework {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.mission-start-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  z-index: 1003;
+  background-color: var(--notification-bg);
+  padding: 18px 30px;
+  border-radius: var(--notification-border-radius);
+  box-shadow: var(--notification-shadow);
+  text-align: center;
+  max-width: 90%;
+  width: 380px;
+  color: var(--notification-text-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform var(--notification-transition-duration)
+      cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity var(--notification-transition-duration) ease-out,
+    visibility var(--notification-transition-duration) ease;
+}
+
+.mission-start-notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.notification-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--notification-success-color);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.notification-message {
+  font-size: 1em;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+
+.notification-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--close-button-red);
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.notification-close-button:hover {
+  color: var(--close-button-red-hover);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  .counter-display {
+    font-size: 10vw;
+    padding: 10px 18px;
+    min-height: 50px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  .arabic-text {
+    font-size: 7vw;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .latin-text {
+    font-size: 4.5vw;
+    margin-bottom: 5px;
+  }
+  .translation-text {
+    font-size: 3.5vw;
+    margin-bottom: 10px;
+  }
+  .plus-button {
+    width: 40vmin;
+    height: 40vmin;
+    font-size: 22vmin;
+    max-width: 140px;
+    max-height: 140px;
+    border-radius: 12px;
+  }
+
+  :root {
+    --floating-button-size: 45px;
+  }
+  .floating-control-button {
+    right: 15px;
+    font-size: 1.1em;
+  }
+
+  .completion-animation p {
+    font-size: 8vw;
+  }
+  .mission-modal {
+    padding: 20px;
+  }
+  .mission-options button {
+    flex: 1 1 100%;
+    max-width: none;
+    padding: 10px 15px;
+  }
+  .mission-start-notification {
+    width: 90%;
+    top: 15px;
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .counter-display {
+    font-size: 11vw;
+    padding: 8px 15px;
+    min-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .arabic-text {
+    font-size: 8vw;
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+  .latin-text {
+    font-size: 5.5vw;
+    margin-bottom: 4px;
+  }
+  .translation-text {
+    font-size: 4.5vw;
+    margin-bottom: 8px;
+  }
+  .plus-button {
+    width: 50vmin;
+    height: 50vmin;
+    font-size: 25vmin;
+    max-width: 110px;
+    max-height: 110px;
+    border-radius: 10px;
+  }
+
+  :root {
+    --floating-button-size: 40px;
+  }
+  .floating-control-button {
+    right: 10px;
+    font-size: 1em;
+  }
+
+  .mission-start-notification {
+    padding: 12px 20px;
+  }
+  .notification-title {
+    font-size: 1.1em;
+  }
+  .notification-message {
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding: 30px;
+  }
+  .counter-display {
+    font-size: 3.5vw;
+    padding: 20px 30px;
+    max-width: 400px;
+    min-height: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .arabic-text {
+    font-size: 2.5vw;
+    margin-bottom: 12px;
+    max-width: 450px;
+    margin-top: 20px;
+  }
+
+  .latin-text {
+    font-size: 2vw;
+    margin-bottom: 12px;
+    max-width: 450px;
+  }
+
+  .translation-text {
+    font-size: 1.6vw;
+    margin-bottom: 25px;
+    max-width: 450px;
+  }
+
+  .plus-button {
+    width: 150px;
+    height: 150px;
+    font-size: 70px;
+    border-radius: 15px;
+  }
+
+  :root {
+    --floating-button-size: 60px;
+  }
+  .floating-control-button {
+    right: 30px;
+    font-size: 1.5em;
+  }
+
+  .mission-modal {
+    max-width: 550px;
+    padding: 35px;
+  }
+
+  .mission-options button {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+  .mission-start-notification {
+    width: 420px;
+    padding: 20px 35px;
+  }
+}

@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #00bb73;
+  --secondary-color: #ffffff;
+  --accent-color: #378a00;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --bg-light: #f4f4f4;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --transition-speed: 0.2s ease;
+  --side-padding: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  flex-grow: 1;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  max-width: none;
+}
+
+header,
+footer {
+  padding: 30px var(--side-padding);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-family: "Amiri", serif;
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  text-shadow: none;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.content-wrapper {
+  display: block;
+  width: 100%;
+  padding: 0 var(--side-padding) 30px var(--side-padding);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#asmaul-husna-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+}
+
+.asma-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-speed);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.asma-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.asma-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-speed);
+}
+
+.asma-card:hover::before {
+  transform: scaleX(1);
+}
+
+.asma-card .arabic {
+  font-family: "Amiri", serif;
+  font-size: 1em;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  direction: rtl;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.asma-card .latin {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.asma-card .translation {
+  font-size: 0.85em;
+  color: var(--text-light);
+  font-weight: 400;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2em;
+  color: #999;
+  grid-column: 1 / -1;
+}
+
+#nadhom-asmaul-husna-section {
+  margin-top: 30px;
+  text-align: center;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nadhom-card {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nadhom-card h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-shadow: none;
+}
+
+.nadhom-item {
+  margin-bottom: 15px;
+}
+
+.nadhom-item .arabic {
+  font-family: "Amiri", serif;
+  font-size: 1.8em;
+  color: var(--accent-color);
+  margin: 5px 0 5px;
+  direction: rtl;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+}
+
+.nadhom-item .latin {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 3px;
+  font-size: 0.95em;
+}
+
+.nadhom-item .translation {
+  font-size: 0.9em;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: auto;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  font-size: 0.85em;
+  padding: 15px var(--side-padding);
+}
+footer p {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  #asmaul-husna-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .asma-card {
+    padding: 20px;
+  }
+  .asma-card .arabic {
+    font-size: 1em;
+  }
+  .asma-card .latin {
+    font-size: 0.8em;
+  }
+  .asma-card .translation {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --side-padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  #asmaul-husna-list {
+    padding: 15px;
+  }
+
+  .asma-card {
+    padding: 18px;
+  }
+
+  .nadhom-card h2 {
+    font-size: 1.3em;
+  }
+
+  .nadhom-item .arabic {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --side-padding: 10px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  #asmaul-husna-list {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  .asma-card .arabic {
+    font-size: 1.6em;
+  }
+}

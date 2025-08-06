@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jadwal Sholat</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+
+  <body>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="col-md-7 mb-3">
+            <div class="input-group mb-2">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Cari Kota"
+              />
+            </div>
+
+            <div class="list-group d-none hasil-search"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center fs-3 text-success fw-normal">
+                JADWAL SHOLAT
+              </h3>
+            </div>
+            <div class="card-body">
+              <p class="text-center fw-semibold fs-4">
+                <span class="title-kota">Kota...</span>
+              </p>
+              <ul class="list-group">
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Subuh
+                  <span class="badge bg-primary rounded-pill subuh"></span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Dzuhur
+                  <span class="badge bg-primary rounded-pill dzuhur"></span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Ashar
+                  <span class="badge bg-primary rounded-pill ashar"></span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Maghrib
+                  <span class="badge bg-primary rounded-pill maghrib"></span>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Isya
+                  <span class="badge bg-primary rounded-pill isya"></span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="card-footer text-muted d-flex justify-content-between align-items-center"
+            >
+              <span class="tanggal-hari"></span>
+              <a
+                class="refresh text-decoration-underline text-muted"
+                style="cursor: pointer"
+                >Refresh Tanggal</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

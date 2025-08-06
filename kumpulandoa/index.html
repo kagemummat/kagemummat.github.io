@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Caridoa</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <img src="../images/kagemuummat.png" alt="" class="about__img" />
+      </center>
+      <h1>Kumpulan Doa Harian</h1>
+
+      <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Silahkan Cari Doa Yang Anda Butuhkan.."
+      />
+
+      <ul id="myUL"></ul>
+      <ul id="charactersList"></ul>
+    </div>
+
+    <div id="doa-popup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-doa-title"></h2>
+        <p id="popup-doa-arabic"></p>
+        <p id="popup-doa-latin"></p>
+        <p id="popup-doa-translation"></p>
+        <button class="copy-btn" id="copyDoaBtn">Salin Doa</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>

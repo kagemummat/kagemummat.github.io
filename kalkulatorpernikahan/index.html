@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Pernikahan</title>
+    <link rel="icon" href="../images/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalkulator Anggaran Pernikahan</h1>
+      <p>Hitung anggaran Pre-wedding, Akad Nikah, dan Resepsi</p>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="prewedding">
+          Pre-wedding
+        </button>
+        <button class="tab-button" data-tab="akad">Akad Nikah</button>
+        <button class="tab-button" data-tab="resepsi">Resepsi</button>
+        <button class="tab-button" data-tab="tambahan">
+          Anggaran Tambahan
+        </button>
+        <button class="tab-button" data-tab="rincian">Rincian Anggaran</button>
+      </div>
+
+      <div id="prewedding" class="tab-content form-section active">
+        <h2>Anggaran Pre-wedding</h2>
+        <div class="input-group">
+          <label for="pw_fotografi">Fotografi Pre-wedding:</label>
+          <input type="text" id="pw_fotografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_videografi">Videografi Pre-wedding:</label>
+          <input type="text" id="pw_videografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_lokasi">Sewa Lokasi Pre-wedding:</label>
+          <input type="text" id="pw_lokasi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_mua">MUA Pre-wedding:</label>
+          <input type="text" id="pw_mua" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_busana">Busana Pre-wedding:</label>
+          <input type="text" id="pw_busana" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_transportasi"
+            >Transportasi & Akomodasi (Pre-wedding):</label
+          >
+          <input type="text" id="pw_transportasi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="pw_lain">Lain-lain (Pre-wedding):</label>
+          <input type="text" id="pw_lain" value="0" />
+        </div>
+        <p class="section-total">
+          Total Pre-wedding: <span id="res_total_pw">Rp 0</span>
+        </p>
+      </div>
+
+      <div id="akad" class="tab-content form-section">
+        <h2>Anggaran Akad Nikah</h2>
+        <div class="input-group">
+          <label for="akad_penghulu">Biaya Penghulu/KUA/Gereja:</label>
+          <input type="text" id="akad_penghulu" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_mahar">Mahar/Mas Kawin:</label>
+          <input type="text" id="akad_mahar" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_busana">Busana Akad Nikah:</label>
+          <input type="text" id="akad_busana" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_mua">MUA Akad Nikah:</label>
+          <input type="text" id="akad_mua" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_dekorasi">Dekorasi Lokasi Akad:</label>
+          <input type="text" id="akad_dekorasi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_catering">Catering Akad (jika ada):</label>
+          <input type="text" id="akad_catering" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_fotografi">Fotografi Akad:</label>
+          <input type="text" id="akad_fotografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_videografi">Videografi Akad:</label>
+          <input type="text" id="akad_videografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="akad_lain">Lain-lain (Akad Nikah):</label>
+          <input type="text" id="akad_lain" value="0" />
+        </div>
+        <p class="section-total">
+          Total Akad Nikah: <span id="res_total_akad">Rp 0</span>
+        </p>
+      </div>
+
+      <div id="resepsi" class="tab-content form-section">
+        <h2>Anggaran Resepsi</h2>
+        <div class="input-group">
+          <label for="resepsi_venue">Sewa Gedung/Venue Resepsi:</label>
+          <input type="text" id="resepsi_venue" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_catering_perporsi"
+            >Catering Resepsi (per porsi):</label
+          >
+          <input type="text" id="resepsi_catering_perporsi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_jumlah_tamu"
+            >Jumlah Tamu Resepsi (perkiraan):</label
+          >
+          <input type="text" id="resepsi_jumlah_tamu" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_dekorasi">Dekorasi Resepsi:</label>
+          <input type="text" id="resepsi_dekorasi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_busana">Busana Resepsi:</label>
+          <input type="text" id="resepsi_busana" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_mua">MUA Resepsi:</label>
+          <input type="text" id="resepsi_mua" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_fotografi">Fotografi Resepsi:</label>
+          <input type="text" id="resepsi_fotografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_videografi">Videografi Resepsi:</label>
+          <input type="text" id="resepsi_videografi" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_undangan">Cetak Undangan:</label>
+          <input type="text" id="resepsi_undangan" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_souvenir">Souvenir:</label>
+          <input type="text" id="resepsi_souvenir" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_hiburan">Hiburan (Musik/MC):</label>
+          <input type="text" id="resepsi_hiburan" value="0" />
+        </div>
+        <div class="input-group">
+          <label for="resepsi_lain">Lain-lain (Resepsi):</label>
+          <input type="text" id="resepsi_lain" value="0" />
+        </div>
+        <p class="section-total">
+          Total Resepsi: <span id="res_total_resepsi_summary">Rp 0</span>
+        </p>
+      </div>
+
+      <div id="tambahan" class="tab-content form-section">
+        <h2>Anggaran Tambahan</h2>
+        <div class="input-group">
+          <label for="biaya_tak_terduga"
+            >Biaya Tak Terduga (misal 10% dari total):</label
+          >
+          <input type="text" id="biaya_tak_terduga" value="0" />
+        </div>
+      </div>
+
+      <div id="rincian" class="tab-content result-section">
+        <h2>Rincian Anggaran</h2>
+        <p class="total-overall">
+          Total Anggaran Keseluruhan:
+          <span id="totalAnggaranKeseluruhan">Rp 0</span>
+        </p>
+
+        <div class="detail-category">
+          <h3>
+            Anggaran Pre-wedding: <span id="res_total_pw_detail">Rp 0</span>
+          </h3>
+          <ul>
+            <li>
+              Fotografi Pre-wedding: <span id="res_pw_fotografi">Rp 0</span>
+            </li>
+            <li>
+              Videografi Pre-wedding: <span id="res_pw_videografi">Rp 0</span>
+            </li>
+            <li>
+              Sewa Lokasi Pre-wedding: <span id="res_pw_lokasi">Rp 0</span>
+            </li>
+            <li>MUA Pre-wedding: <span id="res_pw_mua">Rp 0</span></li>
+            <li>Busana Pre-wedding: <span id="res_pw_busana">Rp 0</span></li>
+            <li>
+              Transportasi & Akomodasi:
+              <span id="res_pw_transportasi">Rp 0</span>
+            </li>
+            <li>Lain-lain (Pre-wedding): <span id="res_pw_lain">Rp 0</span></li>
+          </ul>
+        </div>
+
+        <div class="detail-category">
+          <h3>
+            Anggaran Akad Nikah: <span id="res_total_akad_detail">Rp 0</span>
+          </h3>
+          <ul>
+            <li>
+              Biaya Penghulu/KUA/Gereja:
+              <span id="res_akad_penghulu">Rp 0</span>
+            </li>
+            <li>Mahar/Mas Kawin: <span id="res_akad_mahar">Rp 0</span></li>
+            <li>Busana Akad Nikah: <span id="res_akad_busana">Rp 0</span></li>
+            <li>MUA Akad Nikah: <span id="res_akad_mua">Rp 0</span></li>
+            <li>
+              Dekorasi Lokasi Akad: <span id="res_akad_dekorasi">Rp 0</span>
+            </li>
+            <li>Catering Akad: <span id="res_akad_catering">Rp 0</span></li>
+            <li>Fotografi Akad: <span id="res_akad_fotografi">Rp 0</span></li>
+            <li>Videografi Akad: <span id="res_akad_videografi">Rp 0</span></li>
+            <li>
+              Lain-lain (Akad Nikah): <span id="res_akad_lain">Rp 0</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="detail-category">
+          <h3>
+            Anggaran Resepsi: <span id="res_total_resepsi_detail">Rp 0</span>
+          </h3>
+          <ul>
+            <li>
+              Sewa Gedung/Venue Resepsi:
+              <span id="res_resepsi_venue">Rp 0</span>
+            </li>
+            <li>
+              Total Catering Resepsi:
+              <span id="res_resepsi_catering_total">Rp 0</span>
+            </li>
+            <li>
+              Dekorasi Resepsi: <span id="res_resepsi_dekorasi">Rp 0</span>
+            </li>
+            <li>Busana Resepsi: <span id="res_resepsi_busana">Rp 0</span></li>
+            <li>MUA Resepsi: <span id="res_resepsi_mua">Rp 0</span></li>
+            <li>
+              Fotografi Resepsi: <span id="res_resepsi_fotografi">Rp 0</span>
+            </li>
+            <li>
+              Videografi Resepsi: <span id="res_resepsi_videografi">Rp 0</span>
+            </li>
+            <li>Cetak Undangan: <span id="res_resepsi_undangan">Rp 0</span></li>
+            <li>Souvenir: <span id="res_resepsi_souvenir">Rp 0</span></li>
+            <li>
+              Hiburan (Musik/MC): <span id="res_resepsi_hiburan">Rp 0</span>
+            </li>
+            <li>
+              Lain-lain (Resepsi): <span id="res_resepsi_lain">Rp 0</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="detail-category">
+          <h3>
+            Biaya Tak Terduga: <span id="res_biaya_tak_terduga">Rp 0</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>
