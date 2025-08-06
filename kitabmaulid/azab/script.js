@@ -187,128 +187,127 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         translation: "Bab 3 : Fahuwan nabiyyu Muhammad",
       },
-      [
-        {
-          arabic:
-            "فَهُوَ النَّـــبِيُّ مُحَمَّـدٌ ࣙ بْنُ ذَبِيْحِـهِــمْ مَنْ كَانَ عَبْدَ اللهِ كَهْفًا سَيِّدَا",
-          latin:
-            "Fahuwan-nabiyyu muḫammadunib-nu dzabîḫihim man kâna ‘abdallâhi kahfan sayyidâ",
-          translation:
-            "Dialah Nabi Muhammad ﷺ anak keturunan Ismail yang ayahnya adalah Abdullah seorang pemimpin dan tempat berlindung.",
-        },
-        {
-          arabic:
-            "وَبِعَبْـــــدِ مُطَّلِبٍ أَبُوْهُ لَقَـدْ دُعِيْ وَهُوَ بْنُ هَاشِمٍ ࣙالْجَوَادِ الْمُقْتَدَى",
-          latin:
-            "Wa bi‘abdi muthallibin abûhu laqad du‘î wahuwab-nu hâsyiminil-jawâdil-muqtadâ",
-          translation:
-            "Ayah dari Abdullah (biasa) dipanggil Abdul Muthalib (nama asli: Syaibah) dan ia adalah putra Hasyim yang pemurah dan menjadi panutan.",
-        },
-        {
-          arabic:
-            "أَعْنِيْ ابْنَ عَبْدِ مَنَافِهِمْ مَنْ يَنْتَمِيْ لِقُصَيِّ بْنِ كِلَابِهِمْ مُجْلِي الصَّدَا",
-          latin:
-            "A‘nîb-na ‘abdi manâfihim man yantamî liqushayyib-ni kilâbihim mujlish-shadâ",
-          translation:
-            "Ia (Hasyim) adalah putra Abdu Manaf yang nasab-nasabnya bersambung kepada Qushay putra Kilab yang bersih dari karatan (kotoran).",
-        },
-        {
-          arabic:
-            "وَهُوَ ابْنُ مُـرَّةَ نَجْــــلِ كَعْبِهِمْ الَّذِيْ لِلُؤَيِّهِمْ نُسِبَ بْنُ غَالِبٍ ࣙ الْعِدَى",
-          latin:
-            "Wa huwab-nu murrata najli ka‘bihimil-ladzî lilu'ayyihim nusibab-nu ghâlibinil-‘idâ",
-          translation:
-            "Ia (Kilab) adalah putra Murrah, cucu Ka'ab yang bernisbat kepada Lu'ayyi, putra Ghalib yang menang dalam peperangan.",
-        },
-        {
-          arabic:
-            "ذَاكَ ابْنُ فِهْـــــــرٍ مَنْ أَبُوْهُ مَـــــالِكٌ قَدْ كَانَ حِصْنًا لِلْأَنَامِ وَمَعْضِدَا",
-          latin:
-            "Dzâkab-nu fihrin man abûhu mâlikun qad kâna ḫishnan lil-anâmin wa ma‘dlidâ",
-          translation:
-            "Dia (Ghalib) adalah putra Fihir, ayahnya bernama Malik, benteng perlindungan dan penolong bagi manusia yang membutuhkan pertolongan",
-        },
-        {
-          arabic:
-            "السَّيِّدُ ابْنُ النَّضْرِ مُفْـــــرَدُ عَصْرِهِ مَنْ بِالنَّضَارَةِ وَالْجَمَالِ تَفَرَّدَا",
-          latin:
-            "As-sayyidub-nun-nadlri mufradu ‘ashrihi man bin-nadlârati wal-jamâli tafarradâ",
-          translation:
-            "Dia (Malik) seorang pemimpin, dan putra dari an-Nadlar yang terkenal karena keelokan dan ketampanannya yang istimewa di zamannya.",
-        },
-        {
-          arabic:
-            "ٰذَا هُوَ ابْنُ كِنَانَـةَ بْنُ حُزَيْمَــــةٍ مَنْ بِالْفَخَارِ سَمَا وَفَاقَ الْفَرْقَدَا",
-          latin:
-            "Hâdzâ huwab-nu kinânatab-nu ḫuzaimatin man bil-fakhâri samâ wa fâqâl-farqadâ",
-          translation:
-            "Dia (an-Nadlar) adalah putra dari Kinanah, putra dari Khuzaimah yang dengan kebanggaannya melambung tinggi melebihi bintang kutub utara.",
-        },
-        {
-          arabic:
-            "هُوَ بْنُ مُدْرِكَةَ بْنُ إِلْيَاسَ الَّذِيْ فِي صُلْبِهِ سُمِعَ النَّبِيُّ مُوَحِّـدَا",
-          latin:
-            "Huwab-nu mudrikatab-nu ilyâsal-ladzî fî shulbihi sumi‘an-nabiyyu muwaḫḫidâ",
-          translation:
-            "Dan ia (Khuzaimah) adalah putra dari Mudrikah putra dari Ilyas yang di tulang sulbinya terdengar Nabi sedang mengesakan Allah.",
-        },
-        {
-          arabic:
-            "يُعْزَى إِلَى مُضَرٍ هُوَ ابْنُ نِرَارِهِــمْ أَعْنِيْ بِهِ ابْنَ مَعَدِّهِمْ مَنْ أُرْشِدَا",
-          latin:
-            "Yu‘zâ ilâ mudlarin huwab-nu nizârihim a‘nî bihib-na mu‘addihim man ursyidâ",
-          translation:
-            "Dan ia (Ilyas) digolongkan keturunan Mudlar, putra Nizar—yaitu putra Ma'ad yang diberi petunjuk",
-        },
-        {
-          arabic:
-            "هُوَ ابْنُ عَدْنَانِ الْإِمَامِ الْمُنْتَقَـى مَنْ لِلذَّبِيْحٍ لَهُ انْتِسَابٌ أُكِّدَا",
-          latin:
-            "Huwab-nu ‘adnânil-imâmil-muntaqâ man lidz-dzabîḫin lahun-tisâbun ukkidâ",
-          translation:
-            "Dan dia (Ma'ad) adalah putra 'Adnan seorang imam yang dipatuhi, dan ia sendiri dipastikan (kuat) sebagai keturunan Nabi Ismail as.",
-        },
-        {
-          arabic:
-            "هٰذَا هُوَ النَّسَبُ الَّذِي اتَّفَقُوْا عَلَيـْ ــــهِ وَمَنْ يَخُضْ مِنْ بَعْدُ خَالَفَ وَاعْتَدَا",
-          latin:
-            "Hâdzâ huwan-nasabul-ladzît-tafaqû ‘alaihi wa man yakhudl min ba‘du khâlafa wa‘tadâ",
-          translation:
-            "Inilah silsilah nasab yang disepakati (oleh ahli sejarah). Barang siapa yang berpaling sesudahnya, maka ia telah menentang dan memusuhi.",
-        },
-        {
-          arabic:
-            "وَإِلَيْـــــهِ قَدْ كَانَ الْمُشَـفَّعُ يَنْتَـهِيْ وَيُكَذِّبُ النَّسَابَ مَهْمَا عَدَدَا",
-          latin:
-            "Wa ilaihi qad kânal-musyaffa‘u yantahî wa yukadzdzibun-nasâba mahmâ ‘adadâ",
-          translation:
-            "Sampai di sinilah nasab Nabi Muhammad ﷺ berakhir, dan siapa saja yang membuat nasab di luar ini, maka berdustalah ia.",
-        },
-        {
-          arabic:
-            "وهُو الَّذِيْ فَرْضٌ عَلَيْنَــا حِفْظُهُ وَكَذَاكَ كُلُّ مُكَلَّفٍ قَدْ وَحَّدَا",
-          latin:
-            "Wa huwal-ladzî fardlun ‘alainâ ḫifdhuhu wa kadzâka kullu mukallafin qad waḫḫadâ",
-          translation:
-            "Inilah nasab yang wajib kita menghafalnya, dan demikian pula wajib dihafalkan oleh setiap orang yang mukallaf (baligh) dan bertauhid.",
-        },
-        {
-          arabic:
-            "أَكْرِمْ بِهِ نَسَبًــــا بِعِقْــدِ نِظَامِــــهِ وَحُلَى مَفَاخِرِهِ الْوْجُوْدُ تَقَلَّدَا",
-          latin:
-            "Akrim bihi nasaban bi‘iqdi nidhâmihi wa ḫulâ mafâkhirihil-wujûdu taqalladâ",
-          translation:
-            "Muliakan nasab ini dengan keteraturan urutannya yang dengan nasab tersebut, alam raya telah menyandang hiasan kebanggaannya.",
-        },
-        {
-          arabic:
-            "يَا رَبِّ عَطِّرْ بِالصَّلَاةِ ضَرِيْحَهُ وَأَدِمْ عَلَيْهِ سَلَامَ ذَاتِكَ سَرْمَدَا",
-          latin:
-            "Yaa Rabbi 'attir bish-shalaati dhariiha-hu, wa adim 'alaihi salaama dzaatika sarmadaa",
-          translation:
-            "Wahai Tuhanku, harumkanlah kuburnya dengan shalawat, dan limpahkanlah padanya keselamatan dari Dzat-Mu selama-lamanya.",
-        },
-      ],
+
+      {
+        arabic:
+          "فَهُوَ النَّـــبِيُّ مُحَمَّـدٌ ࣙ بْنُ ذَبِيْحِـهِــمْ مَنْ كَانَ عَبْدَ اللهِ كَهْفًا سَيِّدَا",
+        latin:
+          "Fahuwan-nabiyyu muḫammadunib-nu dzabîḫihim man kâna ‘abdallâhi kahfan sayyidâ",
+        translation:
+          "Dialah Nabi Muhammad ﷺ anak keturunan Ismail yang ayahnya adalah Abdullah seorang pemimpin dan tempat berlindung.",
+      },
+      {
+        arabic:
+          "وَبِعَبْـــــدِ مُطَّلِبٍ أَبُوْهُ لَقَـدْ دُعِيْ وَهُوَ بْنُ هَاشِمٍ ࣙالْجَوَادِ الْمُقْتَدَى",
+        latin:
+          "Wa bi‘abdi muthallibin abûhu laqad du‘î wahuwab-nu hâsyiminil-jawâdil-muqtadâ",
+        translation:
+          "Ayah dari Abdullah (biasa) dipanggil Abdul Muthalib (nama asli: Syaibah) dan ia adalah putra Hasyim yang pemurah dan menjadi panutan.",
+      },
+      {
+        arabic:
+          "أَعْنِيْ ابْنَ عَبْدِ مَنَافِهِمْ مَنْ يَنْتَمِيْ لِقُصَيِّ بْنِ كِلَابِهِمْ مُجْلِي الصَّدَا",
+        latin:
+          "A‘nîb-na ‘abdi manâfihim man yantamî liqushayyib-ni kilâbihim mujlish-shadâ",
+        translation:
+          "Ia (Hasyim) adalah putra Abdu Manaf yang nasab-nasabnya bersambung kepada Qushay putra Kilab yang bersih dari karatan (kotoran).",
+      },
+      {
+        arabic:
+          "وَهُوَ ابْنُ مُـرَّةَ نَجْــــلِ كَعْبِهِمْ الَّذِيْ لِلُؤَيِّهِمْ نُسِبَ بْنُ غَالِبٍ ࣙ الْعِدَى",
+        latin:
+          "Wa huwab-nu murrata najli ka‘bihimil-ladzî lilu'ayyihim nusibab-nu ghâlibinil-‘idâ",
+        translation:
+          "Ia (Kilab) adalah putra Murrah, cucu Ka'ab yang bernisbat kepada Lu'ayyi, putra Ghalib yang menang dalam peperangan.",
+      },
+      {
+        arabic:
+          "ذَاكَ ابْنُ فِهْـــــــرٍ مَنْ أَبُوْهُ مَـــــالِكٌ قَدْ كَانَ حِصْنًا لِلْأَنَامِ وَمَعْضِدَا",
+        latin:
+          "Dzâkab-nu fihrin man abûhu mâlikun qad kâna ḫishnan lil-anâmin wa ma‘dlidâ",
+        translation:
+          "Dia (Ghalib) adalah putra Fihir, ayahnya bernama Malik, benteng perlindungan dan penolong bagi manusia yang membutuhkan pertolongan",
+      },
+      {
+        arabic:
+          "السَّيِّدُ ابْنُ النَّضْرِ مُفْـــــرَدُ عَصْرِهِ مَنْ بِالنَّضَارَةِ وَالْجَمَالِ تَفَرَّدَا",
+        latin:
+          "As-sayyidub-nun-nadlri mufradu ‘ashrihi man bin-nadlârati wal-jamâli tafarradâ",
+        translation:
+          "Dia (Malik) seorang pemimpin, dan putra dari an-Nadlar yang terkenal karena keelokan dan ketampanannya yang istimewa di zamannya.",
+      },
+      {
+        arabic:
+          "ٰذَا هُوَ ابْنُ كِنَانَـةَ بْنُ حُزَيْمَــــةٍ مَنْ بِالْفَخَارِ سَمَا وَفَاقَ الْفَرْقَدَا",
+        latin:
+          "Hâdzâ huwab-nu kinânatab-nu ḫuzaimatin man bil-fakhâri samâ wa fâqâl-farqadâ",
+        translation:
+          "Dia (an-Nadlar) adalah putra dari Kinanah, putra dari Khuzaimah yang dengan kebanggaannya melambung tinggi melebihi bintang kutub utara.",
+      },
+      {
+        arabic:
+          "هُوَ بْنُ مُدْرِكَةَ بْنُ إِلْيَاسَ الَّذِيْ فِي صُلْبِهِ سُمِعَ النَّبِيُّ مُوَحِّـدَا",
+        latin:
+          "Huwab-nu mudrikatab-nu ilyâsal-ladzî fî shulbihi sumi‘an-nabiyyu muwaḫḫidâ",
+        translation:
+          "Dan ia (Khuzaimah) adalah putra dari Mudrikah putra dari Ilyas yang di tulang sulbinya terdengar Nabi sedang mengesakan Allah.",
+      },
+      {
+        arabic:
+          "يُعْزَى إِلَى مُضَرٍ هُوَ ابْنُ نِرَارِهِــمْ أَعْنِيْ بِهِ ابْنَ مَعَدِّهِمْ مَنْ أُرْشِدَا",
+        latin:
+          "Yu‘zâ ilâ mudlarin huwab-nu nizârihim a‘nî bihib-na mu‘addihim man ursyidâ",
+        translation:
+          "Dan ia (Ilyas) digolongkan keturunan Mudlar, putra Nizar—yaitu putra Ma'ad yang diberi petunjuk",
+      },
+      {
+        arabic:
+          "هُوَ ابْنُ عَدْنَانِ الْإِمَامِ الْمُنْتَقَـى مَنْ لِلذَّبِيْحٍ لَهُ انْتِسَابٌ أُكِّدَا",
+        latin:
+          "Huwab-nu ‘adnânil-imâmil-muntaqâ man lidz-dzabîḫin lahun-tisâbun ukkidâ",
+        translation:
+          "Dan dia (Ma'ad) adalah putra 'Adnan seorang imam yang dipatuhi, dan ia sendiri dipastikan (kuat) sebagai keturunan Nabi Ismail as.",
+      },
+      {
+        arabic:
+          "هٰذَا هُوَ النَّسَبُ الَّذِي اتَّفَقُوْا عَلَيـْ ــــهِ وَمَنْ يَخُضْ مِنْ بَعْدُ خَالَفَ وَاعْتَدَا",
+        latin:
+          "Hâdzâ huwan-nasabul-ladzît-tafaqû ‘alaihi wa man yakhudl min ba‘du khâlafa wa‘tadâ",
+        translation:
+          "Inilah silsilah nasab yang disepakati (oleh ahli sejarah). Barang siapa yang berpaling sesudahnya, maka ia telah menentang dan memusuhi.",
+      },
+      {
+        arabic:
+          "وَإِلَيْـــــهِ قَدْ كَانَ الْمُشَـفَّعُ يَنْتَـهِيْ وَيُكَذِّبُ النَّسَابَ مَهْمَا عَدَدَا",
+        latin:
+          "Wa ilaihi qad kânal-musyaffa‘u yantahî wa yukadzdzibun-nasâba mahmâ ‘adadâ",
+        translation:
+          "Sampai di sinilah nasab Nabi Muhammad ﷺ berakhir, dan siapa saja yang membuat nasab di luar ini, maka berdustalah ia.",
+      },
+      {
+        arabic:
+          "وهُو الَّذِيْ فَرْضٌ عَلَيْنَــا حِفْظُهُ وَكَذَاكَ كُلُّ مُكَلَّفٍ قَدْ وَحَّدَا",
+        latin:
+          "Wa huwal-ladzî fardlun ‘alainâ ḫifdhuhu wa kadzâka kullu mukallafin qad waḫḫadâ",
+        translation:
+          "Inilah nasab yang wajib kita menghafalnya, dan demikian pula wajib dihafalkan oleh setiap orang yang mukallaf (baligh) dan bertauhid.",
+      },
+      {
+        arabic:
+          "أَكْرِمْ بِهِ نَسَبًــــا بِعِقْــدِ نِظَامِــــهِ وَحُلَى مَفَاخِرِهِ الْوْجُوْدُ تَقَلَّدَا",
+        latin:
+          "Akrim bihi nasaban bi‘iqdi nidhâmihi wa ḫulâ mafâkhirihil-wujûdu taqalladâ",
+        translation:
+          "Muliakan nasab ini dengan keteraturan urutannya yang dengan nasab tersebut, alam raya telah menyandang hiasan kebanggaannya.",
+      },
+      {
+        arabic:
+          "يَا رَبِّ عَطِّرْ بِالصَّلَاةِ ضَرِيْحَهُ وَأَدِمْ عَلَيْهِ سَلَامَ ذَاتِكَ سَرْمَدَا",
+        latin:
+          "Yaa Rabbi 'attir bish-shalaati dhariiha-hu, wa adim 'alaihi salaama dzaatika sarmadaa",
+        translation:
+          "Wahai Tuhanku, harumkanlah kuburnya dengan shalawat, dan limpahkanlah padanya keselamatan dari Dzat-Mu selama-lamanya.",
+      },
     ],
 
     //Halaman 4
