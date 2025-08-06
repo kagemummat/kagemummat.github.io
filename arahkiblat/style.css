@@ -1,0 +1,425 @@
+:root {
+  --primary-green: #2e7d32;
+  --dark-green: #1b5e20;
+  --light-green-bg: #e0f2e0;
+  --accent-gold: #ffc107;
+  --text-dark: #212121;
+  --text-light: #424242;
+  --border-color: rgba(46, 125, 50, 0.3);
+  --shadow-color-light: rgba(0, 0, 0, 0.05);
+  --shadow-color-medium: rgba(0, 0, 0, 0.12);
+  --shadow-color-strong: rgba(0, 0, 0, 0.25);
+  --border-radius-card: 20px;
+  --border-radius-button: 12px;
+  --error-color: #d32f2f;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #f0f0f0 0%, var(--light-green-bg) 100%);
+  color: var(--text-dark);
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 90%;
+  width: 100%;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 15px 40px var(--shadow-color-medium);
+  transition: all 0.4s ease-in-out;
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.compass-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.compass {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px var(--shadow-color-light),
+    0 5px 20px var(--shadow-color-medium);
+  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+  overflow: hidden;
+  border: 1px solid var(--primary-green);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.compass > .arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 30px 20px 0 20px;
+  border-color: #e53935 transparent transparent transparent;
+  z-index: 2;
+}
+
+.compass > .compass-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: none;
+  background: url(https://purepng.com/public/uploads/large/purepng.com-compasscompassinstrumentnavigationcardinal-directionspointsdiagram-1701527842316onq7x.png)
+    center no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.compass > .qibla-line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-gold);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  z-index: 3;
+  opacity: 0.9;
+  transition: none;
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.info-box {
+  background-color: var(--light-green-bg);
+  padding: 25px 35px;
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 8px 25px var(--shadow-color-light);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+.info-box h2 {
+  color: var(--primary-green);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  letter-spacing: 0.5px;
+}
+
+.info-box p {
+  margin: 10px 0;
+  color: var(--text-light);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.info-box span {
+  font-weight: 700;
+  color: var(--primary-green);
+  font-size: 1.1em;
+}
+
+#accuracy-info {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 15px;
+}
+
+.start-btn {
+  padding: 16px 35px;
+  font-size: 1.2em;
+  background: linear-gradient(
+    180deg,
+    var(--primary-green) 0%,
+    var(--dark-green) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  margin-top: 30px;
+  box-shadow: 0 6px 15px var(--shadow-color-medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  background: linear-gradient(
+    180deg,
+    var(--dark-green) 0%,
+    var(--primary-green) 100%
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-color-medium);
+}
+
+.start-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px var(--shadow-color-light);
+}
+
+.permission-message {
+  color: var(--error-color);
+  margin-top: 20px;
+  font-weight: 600;
+  text-align: center;
+  max-width: 350px;
+  line-height: 1.4;
+}
+
+.debug-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-green);
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--shadow-color-medium);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.debug-icon:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+.debug-icon:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px var(--shadow-color-light);
+}
+
+.debug-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.debug-modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.debug-info-card {
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 10px 30px var(--shadow-color-strong);
+  text-align: left;
+  width: 350px;
+  max-width: 90%;
+  border: 1px solid var(--border-color);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.debug-modal-overlay.active .debug-info-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.debug-info-card h3 {
+  color: var(--primary-green);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  border-bottom: 2px solid var(--light-green-bg);
+  padding-bottom: 10px;
+}
+
+.debug-info-card p {
+  margin: 12px 0;
+  color: var(--text-light);
+  font-size: 0.95em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debug-info-card p strong {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.debug-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.debug-modal-close:hover {
+  color: var(--error-color);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .compass {
+    width: 250px;
+    height: 250px;
+  }
+
+  .info-box {
+    padding: 20px 25px;
+    width: 280px;
+  }
+
+  .start-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+  }
+
+  .permission-message {
+    font-size: 0.9em;
+  }
+
+  .debug-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3em;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .debug-info-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .debug-modal-close {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .compass {
+    width: 200px;
+    height: 200px;
+  }
+
+  .compass > .arrow {
+    border-width: 25px 15px 0 15px;
+  }
+
+  .compass > .qibla-line {
+    width: 3px;
+  }
+
+  .info-box {
+    padding: 15px 20px;
+    width: 240px;
+    font-size: 0.9em;
+  }
+
+  .info-box h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+  }
+
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .permission-message {
+    font-size: 0.8em;
+  }
+
+  .debug-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .debug-info-card {
+    padding: 20px;
+  }
+
+  .debug-info-card h3 {
+    font-size: 1.1em;
+    padding-bottom: 8px;
+  }
+
+  .debug-info-card p {
+    font-size: 0.85em;
+    margin: 10px 0;
+  }
+  .debug-modal-close {
+    font-size: 1.4em;
+    top: 10px;
+    right: 10px;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Arah Kiblat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../lock.css" />
+    <link rel="icon" href="../images/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <div class="compass-section">
+          <div class="compass">
+            <div class="arrow"></div>
+            <div class="compass-circle"></div>
+            <div class="qibla-line"></div>
+          </div>
+        </div>
+        <div class="info-box">
+          <h2>Informasi Kompas</h2>
+          <p>Arah Kompas (Raw): <span id="rawCompassHeading">N/A</span>°</p>
+          <p>Arah Kompas (Smoothed): <span id="compassHeading">N/A</span>°</p>
+          <p>Arah Kiblat: <span id="qiblaDegree">N/A</span>°</p>
+          <p id="accuracy-info">Mencari lokasi...</p>
+        </div>
+      </div>
+      <button class="start-btn">Mulai Kompas</button>
+      <p id="permission-status" class="permission-message"></p>
+    </div>
+
+    <div class="debug-icon" id="debugIcon">
+      <i class="fas fa-info"></i>
+    </div>
+
+    <div class="debug-modal-overlay" id="debugModalOverlay">
+      <div class="debug-info-card">
+        <button class="debug-modal-close" id="debugModalClose">&times;</button>
+        <h3>Debugging Info</h3>
+        <p>Sensor Active: <strong id="sensorStatus">No</strong></p>
+        <p>Animation Loop: <strong id="animationStatus">No</strong></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../lock.js"></script>
+  </body>
+</html>
